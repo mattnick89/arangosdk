@@ -1,7 +1,7 @@
 var arangojs = require("arangojs");
 var Database = arangojs.Database;
 
-module.exports = class ArangoSDK {
+class ArangoSDK {
     
     constructor(url, database, username, password){
         this.url = url;
@@ -60,3 +60,5 @@ module.exports = class ArangoSDK {
     }
 
 }
+
+module.exports = ArangoSDK;
