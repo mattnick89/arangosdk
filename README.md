@@ -30,7 +30,7 @@ const results = await db.query("FOR doc IN `users` FILTER doc.userID ==  @uid RE
 /*
 
     Success:
-    {error: null, keys: [...], length: 3}
+    {error: null, docs: [...], length: 3}
 
     Error:
     {error: {some arango error}}
@@ -39,7 +39,7 @@ const results = await db.query("FOR doc IN `users` FILTER doc.userID ==  @uid RE
 
 if(!results.error){
     //do something
-    results.keys.forEach((row)=>console.log(row))
+    results.docs.forEach((row)=>console.log(row))
 }else{
     console.log(results.error);
 }
