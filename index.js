@@ -19,7 +19,7 @@ class ArangoSDK {
         return new Promise((resolve)=>{
             this.instance.query(aql, vars)
             .then((cursor) => cursor.all())
-            .then((docs)=> resolve({error: null, docs: keys, length: keys.length}),
+            .then((docs)=> resolve({error: null, docs: docs, length: keys.length}),
             (err)=>resolve({error: err}))
         })
     }
