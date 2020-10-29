@@ -133,6 +133,20 @@ if(!result.error){
 
 ```
 
+## Close Connection
+
+Closes all active connections
+
+```javascript
+const ArangoSDK = require('@mattnick/arangosdk');
+const db = new ArangoSDK('url', 'databaseName', 'username', 'password');
+
+
+db.close();
+
+
+```
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

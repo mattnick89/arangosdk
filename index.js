@@ -59,6 +59,10 @@ class ArangoSDK {
         this.instance.useBasicAuth(this.username, this.password);
     }
 
+    close(){
+        this.instance.close();
+    }
+
 }
 
 module.exports = ArangoSDK;
